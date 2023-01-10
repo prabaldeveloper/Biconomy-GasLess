@@ -66,7 +66,7 @@ const data = `Test data for tokenId 194`;
         gasLimit: limit,
         data: rawdata,
         batchId: i,
-        batchNonce: await web3.eth.getTransactionCount(userAddress),
+        batchNonce: await web3.eth.getTransactionCount(signerAddress),
     }
 
     const signedTx = await web3.eth.accounts.signTransaction(rawTx, `0x${privateKey}`);
